@@ -1,0 +1,8 @@
+[June 25, 2016]
+INF- Initial setup of github repo.
+DES- added an example of simple-fortran. This example is used as a design/development driver.
+DES- Three major steps are added in examples/simple-fortran/Makefile.
+IDE- The three steps are: analyze, generate, and test
+IDE - Soruce code, Makefiles are collection of idea, design, implementation, and other knowledges.
+IDE - Need a syntax to add idea, design, implementation, and other decisions. For example, I added "SYMUNIT := ../../bin/symunit" in Makefile. I may add why I choose the structure.
+

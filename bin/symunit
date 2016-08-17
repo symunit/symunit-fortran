@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+
+import sys
+import argparse
+import symunit
+
+"""SymUnit is a main entry
+
+    Overview
+    --------
+
+    - read a source file (read)
+    - analyze symunit directive (
+    - recommend symunit directives ( suggest )
+    - generate unit test cases (generate)
+    - run unit tests( test )
+    - collect test results and report ( report )
+
+"""
+
+class SymUnit(object):
+
+    def __init__(self):
+        parser = argparse.ArgumentParser(
+            description='SymUnit commands',
+            usage='''symunit <command> [<args>]
+
+Available commands are:
+   read         Reads a source file
+   suggest      Suggests SymUnit directives
+   generate     Generates test cases
+   test         Executes test cases
+   report       Generates test report
+''')
+        parser.add_argument('command', help='{read,suggest,generate,test,report}')
+        args = parser.parse_args(sys.argv[1:2])
+        if not hasattr(self, args.command):
+            print ('Unrecognized command')
+            parser.print_help()
+            exit(1)
+        getattr(self, args.command)()
+
+    def read(self):
+        symunit.SURead(sys.argv[2:])
+
+    def suggest(self):
+        symunit.SUSuggest(sys.argv[2:])
+
+
+SymUnit()

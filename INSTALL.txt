@@ -1,0 +1,4 @@
+See doc/source/install.rst
+or
+http://symunit.github.io/documentation/latest/install.html
+
