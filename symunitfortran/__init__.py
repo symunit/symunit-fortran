@@ -4,7 +4,7 @@ SymUnit
 
     SymUnit is a Python package for automatically generating unit tests.
 
-    https://symunit.github.com/
+    https://symunit-fortran.github.com/
 
 Using
 -----
@@ -32,7 +32,7 @@ del sys
 import sys
 
 # Release data
-from symunit import release
+from symunitfortran import release
 
 __author__ = '%s <%s>' % release.AUTHORS['Youngsung']
 __license__ = release.LICENSE

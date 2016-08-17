@@ -4,7 +4,7 @@
 
 import argparse
 
-class SURead(object):
+class Read(object):
     def __init__(self, argv):
         parser = argparse.ArgumentParser(description='Reads a source file')
         #parser.add_argument('--amend', action='store_true')

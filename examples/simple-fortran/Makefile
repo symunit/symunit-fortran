@@ -1,6 +1,6 @@
 # Makefile for simple-fortran example
 
-SYMUNIT := ../../bin/symunit
+SYMUNIT := ../../bin/symunit-fortran
 TARGET_SRCFILE := ./src/interpolate.F90
 
 

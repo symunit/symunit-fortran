@@ -2,7 +2,7 @@
 
 import sys
 import argparse
-import symunit
+import symunitfortran as suf
 
 """SymUnit is a main entry
 
@@ -31,8 +31,9 @@ Available commands are:
    generate     Generates test cases
    test         Executes test cases
    report       Generates test report
+   help         Shows command helps
 ''')
-        parser.add_argument('command', help='{read,suggest,generate,test,report}')
+        parser.add_argument('command', help='{read,suggest,generate,test,report,help}')
         args = parser.parse_args(sys.argv[1:2])
         if not hasattr(self, args.command):
             print ('Unrecognized command')
@@ -41,10 +42,10 @@ Available commands are:
         getattr(self, args.command)()
 
     def read(self):
-        symunit.SURead(sys.argv[2:])
+        suf.Read(sys.argv[2:])
 
     def suggest(self):
-        symunit.SUSuggest(sys.argv[2:])
+        suf.Suggest(sys.argv[2:])
 
 
 SymUnit()

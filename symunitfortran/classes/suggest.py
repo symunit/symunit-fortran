@@ -4,7 +4,7 @@
 
 import argparse
 
-class SUSuggest(object):
+class Suggest(object):
     def __init__(self, argv):
         parser = argparse.ArgumentParser(
             description='Suggests SymUnit directives')
