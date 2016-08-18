@@ -5,7 +5,11 @@
 import argparse
 
 class Suggest(object):
-    def __init__(self, argv):
+    def __init__(self, cmd, argv):
+
+        self.mycmd = cmd
+        self.mycfg = config.cmdconfig[cmd]
+
         parser = argparse.ArgumentParser(
             description='Suggests SymUnit directives')
         #parser.add_argument('repository')

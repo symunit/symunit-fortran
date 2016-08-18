@@ -8,7 +8,11 @@ TARGET_SRCFILE := ./src/interpolate.F90
 # then, the tool analyze the direction and source code
 # output: the tool provides a skeleton of further directions
 # that user need to provide
-analyze:
+
+all: read
+
+# read target source file and generates danata graph
+read: ${TARGET_SRCFILE}
 	@${SYMUNIT} read ${TARGET_SRCFILE}
 
 

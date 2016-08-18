@@ -39,13 +39,15 @@ Available commands are:
             print ('Unrecognized command')
             parser.print_help()
             exit(1)
-        getattr(self, args.command)()
 
-    def read(self):
-        suf.Read(sys.argv[2:])
+        suf.config.cmdconfig[args.command] = {}
+        getattr(self, args.command)(args.command, sys.argv[2:])
 
-    def suggest(self):
-        suf.Suggest(sys.argv[2:])
+    def read(self, cmd, argv):
+        suf.Read(cmd, argv)
+
+    def suggest(self, cmd, argv):
+        suf.Suggest(cmd, argv)
 
 
 SymUnit()
